@@ -5,11 +5,13 @@ import Button from '../Forms/Button'
 import Input from '../Forms/Input'
 
 const LoginForm = () => {
-  const [ username, setUsername ] = React.useState('')
-  const [ password, setPassword ] = React.useState('')
+  const username = useForm('email')
+  const password = useForm()
+  
 
   async function handleSubmit(event){
     event.preventDefault()
+    
     const response = await fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
       method: 'POST',
       headers: {
@@ -31,14 +33,16 @@ const LoginForm = () => {
 
         <Input
           label="Usuario"
-          type="text"
+          type="email"
           name="username"
+          {...username}
         />        
 
         <Input
           label="Senha"
           type="password"
           name="password"
+          {...password}
         />
 
         <Button >Logar</Button>
