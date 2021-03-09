@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react"
 
 const LoginCreate = () => {
-  return (
-    <div>
-      Login Create
-    </div>
-  )
+  return <div>Login Create</div>
 }
 
 export default LoginCreate

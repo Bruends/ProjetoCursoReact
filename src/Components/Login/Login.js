@@ -1,9 +1,9 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import LoginCreate from './LoginCreate'
-import LoginForm from './LoginForm'
-import LoginPasswordLost from './LoginPasswordLost'
-import LoginPasswordReset from './LoginPasswordReset'
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import LoginCreate from "./LoginCreate"
+import LoginForm from "./LoginForm"
+import LoginPasswordLost from "./LoginPasswordLost"
+import LoginPasswordReset from "./LoginPasswordReset"
 
 const Login = () => {
   return (
@@ -11,7 +11,7 @@ const Login = () => {
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="criar" element={<LoginCreate />} />
-        <Route path="perdeu" element={<LoginPasswordLost /> } />
+        <Route path="perdeu" element={<LoginPasswordLost />} />
         <Route path="resetar" element={<LoginPasswordReset />} />
       </Routes>
     </div>
